@@ -4,6 +4,7 @@ import { Card } from '../../components/Card/Card'
 import { FailLoadData } from '../../components/Shared/FailLoadData/FailLoadData'
 import { data } from '../../database/data'
 import { Cart } from '../../components/Cart/Cart'
+import { HomePageMainStyle, HomePageUlStyle } from './HomePageStyle'
 
 export const HomePage = () => {
 
@@ -14,19 +15,19 @@ export const HomePage = () => {
     })
 
     return (
-        <main>
+        <HomePageMainStyle>
         {
             loadData !== null ?
             <>
-                <ul>
+                <HomePageUlStyle>
                     {loadData.map(item => <Card key={item.id} {...item} /> )}
                     <Card />
-                </ul>
+                </HomePageUlStyle>
                 <Cart />
             </>
             :
             <FailLoadData />
         }
-        </main>
+        </HomePageMainStyle>
     )
 }

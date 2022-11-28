@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom'
+
 export const Cart = () => {
     return (
         <>
-            <button>
-                <img src="" alt="" />
-            </button>
+        <a href=""></a>
         </>
     )
 }
