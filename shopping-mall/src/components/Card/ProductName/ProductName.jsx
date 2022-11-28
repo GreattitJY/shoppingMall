@@ -1,7 +1,9 @@
-export const ProductName = () => {
+import { ProductNamePStyle } from "./ProductNameStyle"
+
+export const ProductName = ({productName}) => {
     return (
         <>
-            <p></p> 
+            <ProductNamePStyle>{productName}</ProductNamePStyle> 
         </>
     )
 }
