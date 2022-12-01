@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
+import { CartLinkStyle } from './CartStyle'
 
 export const Cart = () => {
     return (
         <>
-        <a href=""></a>
+        <CartLinkStyle to='\'></CartLinkStyle>
         </>
     )
 }

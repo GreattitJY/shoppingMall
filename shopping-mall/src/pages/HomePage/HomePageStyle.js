@@ -12,5 +12,5 @@ export const HomePageUlStyle = styled.ul`
     grid-template-columns: 1fr 1fr 1fr;
     gap: 60px;
     width: 1260px;
-    margin-right: 60px;
+    /* margin-right: 60px; */
 `;

@@ -21,7 +21,6 @@ export const HomePage = () => {
             <>
                 <HomePageUlStyle>
                     {loadData.map(item => <Card key={item.id} {...item} /> )}
-                    <Card />
                 </HomePageUlStyle>
                 <Cart />
             </>
