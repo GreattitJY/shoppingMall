@@ -3,7 +3,7 @@ import { CartLinkStyle } from './CartStyle'
 export const Cart = () => {
     return (
         <>
-        <CartLinkStyle to='\'></CartLinkStyle>
+        <CartLinkStyle to='/cart'></CartLinkStyle>
         </>
     )
 }

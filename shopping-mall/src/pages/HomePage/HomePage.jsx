@@ -9,7 +9,6 @@ import { HomePageMainStyle, HomePageUlStyle } from './HomePageStyle'
 export const HomePage = () => {
 
     const [loadData, setLoadData] = useState(null)
-
     useContext(data).then(data => {
         setLoadData(data)
     })
@@ -20,7 +19,7 @@ export const HomePage = () => {
             loadData !== null ?
             <>
                 <HomePageUlStyle>
-                    {loadData.map(item => <Card key={item.id} {...item} /> )}
+                    {loadData.map(item => <Card key={item.id} {...item} />)}
                 </HomePageUlStyle>
                 <Cart />
             </>

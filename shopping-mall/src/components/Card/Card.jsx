@@ -3,16 +3,33 @@ import { ProductName } from "./ProductName/ProductName"
 import { ProductPrice } from "./ProductPrice/ProductPrice"
 import { ProductHeartBtn } from "./ProductHeartBtn/ProductHeartBtn"
 import { CardLiStyle } from "./CardStyle"
+import { useState } from "react"
+import { Modal } from "./Modal/Modal"
 
-export const Card = ({productName, thumbnailImg, price}) => {
+export const Card = (props) => {
+
+    const [isModal, setIsModal] = useState(false)
+    const handleModal = (e) => {
+        setIsModal(!isModal)
+    }
+
     return (
         <>
-            <CardLiStyle>
-                <ProductImg {...{productName, thumbnailImg}}/>
-                <ProductName {...{productName}} />
-                <ProductHeartBtn></ProductHeartBtn>
-                <ProductPrice {...{price}} />
+            <CardLiStyle onClick={handleModal}>
+                <ProductImg 
+                    productName={props.productName}
+                    thumbnailImg={props.thumbnailImg}
+                />
+                <ProductName 
+                    productName={props.productName}
+                />
+                <ProductHeartBtn />
+                <ProductPrice
+                    price={props.price}
+                />
             </CardLiStyle>
+            { isModal ?<Modal {...props} {...{setIsModal}} /> :<></>}
+                
         </>
     )
 }
